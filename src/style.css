@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: transparent;
+}
+
+body {
+    font-family: Consolas, 'Courier New', monospace;
+}
+
+.canvas {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: transparent;
+}
+
+.art {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    pointer-events: none;
+}
+
+/* Left upper panel: empty area in new image at x=45..465, y=1017..1334 */
+.commands {
+    position: absolute;
+    left: 6.2%;
+    top: 67.5%;
+    width: 42.5%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 7%;
+    color: #241f17;
+    overflow: hidden;
+}
+
+.command {
+    display: grid;
+    grid-template-columns: 12% minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 4%;
+    height: 26%;
+    font-size: clamp(12px, 2.7vw, 24px);
+    font-weight: 900;
+}
+
+.key {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1;
+    background: #ffe05a;
+    color: #15120e;
+    border: 2px solid #272116;
+    border-radius: 4px;
+    font-size: 1.15em;
+}
+
+.name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.elapsed {
+    font-size: .8em;
+    color: #675b45;
+}
+
+.placeholder {
+    font-size: clamp(12px, 2.5vw, 24px);
+    font-weight: 700;
+    color: #645c49;
+}
+
+/* Left lower panel: empty area in new image at x=45..465, y=1352..1504 */
+.players {
+    position: absolute;
+    left: 6.5%;
+    top: 88.5%;
+    width: 42%;
+    height: 9%;
+    display: flex;
+    flex-direction: column;
+    gap: 6%;
+    color: #241f17;
+    overflow: hidden;
+    font-size: clamp(11px, 2.3vw, 22px);
+    font-weight: 850;
+}
+
+.now-label,
+.next-label {
+    font-size: .85em;
+    color: #776347;
+    font-weight: 900;
+}
+
+.player-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4%;
+    line-height: 1.05;
+}
+
+.current {
+    color: #166638;
+}
+
+.credits {
+    white-space: nowrap;
+    font-size: .85em;
+}
+
+.collective {
+    color: #166638;
+    font-weight: 900;
+}
+
+.no-queue,
+.extra {
+    font-size: .9em;
+    color: #6d624e;
+}

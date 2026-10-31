@@ -1,0 +1,72 @@
+# Dependencies
+node_modules/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Vite / build output
+dist/
+build/
+.vite/
+node_modules/.vite/
+
+# Logs and debug files
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Test coverage and caches
+coverage/
+.nyc_output/
+.cache/
+*.tsbuildinfo
+
+# Local runtime data (keep examples if needed)
+data/
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+
+# Emulator saves and save states
+*.sav
+*.srm
+*.ss0
+*.ss1
+*.ss2
+*.ss3
+*.ss4
+*.ss5
+*.ss6
+*.ss7
+*.ss8
+*.ss9
+*.state
+*.state[0-9]*
+
+# Local ROMs
+*.gb
+*.gbc
+*.gba
+*.zip
+*.7z
+
+# Editor and OS files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp

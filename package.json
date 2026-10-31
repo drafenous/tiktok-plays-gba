@@ -1,0 +1,30 @@
+{
+  "name": "tiktok-plays-gba",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Control Game Boy, Game Boy Color and Game Boy Advance games through TikTok LIVE chat commands and gifts.",
+  "scripts": {
+    "dev": "concurrently -k \"node --env-file=.env server.mjs --test\" \"vite --host 127.0.0.1\"",
+    "live": "concurrently -k \"node --env-file=.env server.mjs\" \"vite --host 127.0.0.1\"",
+    "dev:server": "node --env-file=.env server.mjs --test",
+    "live:server": "node --env-file=.env server.mjs",
+    "dev:overlay": "vite --host 127.0.0.1",
+    "test": "node --test tests.mjs",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tiktok-live-connector": "^2.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
+    "concurrently": "^9.2.0",
+    "vite": "^6.3.0"
+  }
+}
